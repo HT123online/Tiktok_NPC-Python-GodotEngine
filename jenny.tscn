@@ -1,0 +1,186 @@
+[gd_scene load_steps=16 format=3 uid="uid://dk4ewi0f83gyg"]
+
+[ext_resource type="PackedScene" uid="uid://crw704puuk85k" path="res://jenny/Jenny.blend" id="1_qakm8"]
+[ext_resource type="Texture2D" uid="uid://3ujjt8e2o1jn" path="res://jenny/textures/Jenny Belle.png" id="2_mnxxd"]
+[ext_resource type="Script" path="res://addons/wigglebone/wiggle_bone.gd" id="3_2ql6l"]
+[ext_resource type="Script" path="res://addons/wigglebone/wiggle_properties.gd" id="4_4l4f0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxwc4"]
+albedo_texture = ExtResource("2_mnxxd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcglr"]
+albedo_texture = ExtResource("2_mnxxd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oassq"]
+albedo_texture = ExtResource("2_mnxxd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lt8ol"]
+albedo_texture = ExtResource("2_mnxxd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjahu"]
+albedo_texture = ExtResource("2_mnxxd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wjfs"]
+albedo_texture = ExtResource("2_mnxxd")
+
+[sub_resource type="Resource" id="Resource_bjwln"]
+script = ExtResource("4_4l4f0")
+mode = 0
+stiffness = 0.78
+damping = 0.64
+gravity = Vector3(0, 0, 0)
+length = 0.1
+max_distance = 0.1
+max_degrees = 60.0
+
+[sub_resource type="Animation" id="Animation_aq6t2"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D:bip_upperArm_R")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.617399, -0.0198144, -0.0220205, 0.786092)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D:bip_upperArm_L")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.589624, 0.0190347, 0.0226977, 0.807134)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D:bip_lowerArm_R")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0699193, -0.000221828, 0.0904705, 0.993442)
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "rotation_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Armature/Skeleton3D:bip_lowerArm_L")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.0699193, 0.000221867, -0.0904705, 0.993442)
+
+[sub_resource type="Animation" id="Animation_6cpsu"]
+resource_name = "idle"
+loop_mode = 2
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D:bip_upperArm_R")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.085896, -0.00451396, -0.0292768, 0.995864, 1, 1, 0.491369, 0.012804, -0.0267125, 0.870448)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D:bip_upperArm_L")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.467559, -0.0120742, 0.0270503, 0.883465, 1, 1, -0.0657789, 0.00392207, 0.0293619, 0.997394)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D:bip_lowerArm_R")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0699193, -0.000221828, 0.0904705, 0.993442, 1, 1, 0.298979, -0.00760283, 0.0860899, 0.950338)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D:bip_lowerArm_L")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.342099, 0.00900531, -0.0846791, 0.935797, 1, 1, 0.0699193, 0.000221867, -0.0904705, 0.993442)
+
+[sub_resource type="Animation" id="Animation_bgecs"]
+resource_name = "jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 10.3846, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vru81"]
+_data = {
+"RESET": SubResource("Animation_aq6t2"),
+"idle": SubResource("Animation_6cpsu"),
+"jump": SubResource("Animation_bgecs")
+}
+
+[node name="Jenny" instance=ExtResource("1_qakm8")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/24/position = Vector3(-1.11846e-08, 6.79756, 2.01971e-05)
+bones/24/rotation = Quaternion(-0.589624, 0.0190347, 0.0226977, 0.807134)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/position = Vector3(1.18714e-07, 9.72582, -2.44689e-06)
+bones/25/rotation = Quaternion(0.0699193, 0.000221867, -0.0904705, 0.993442)
+bones/25/scale = Vector3(1, 1, 1)
+bones/28/position = Vector3(4.30757e-07, 6.79756, 2.0267e-05)
+bones/28/rotation = Quaternion(-0.617399, -0.0198144, -0.0220205, 0.786092)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/position = Vector3(-1.66779e-07, 9.72582, 4.51588e-06)
+bones/29/rotation = Quaternion(0.0699193, -0.000221828, 0.0904705, 0.993442)
+bones/29/scale = Vector3(1, 1, 1)
+bones/31/scale = Vector3(1, 1, 1)
+
+[node name="Cube" parent="Armature/Skeleton3D" index="2"]
+material_override = SubResource("StandardMaterial3D_vxwc4")
+
+[node name="Cube_001" parent="Armature/Skeleton3D" index="3"]
+material_override = SubResource("StandardMaterial3D_tcglr")
+
+[node name="Cube_002" parent="Armature/Skeleton3D" index="4"]
+material_override = SubResource("StandardMaterial3D_oassq")
+
+[node name="Cube_004" parent="Armature/Skeleton3D" index="5"]
+material_override = SubResource("StandardMaterial3D_lt8ol")
+
+[node name="Cube_005" parent="Armature/Skeleton3D" index="6"]
+material_override = SubResource("StandardMaterial3D_qjahu")
+
+[node name="Cube_006" parent="Armature/Skeleton3D" index="7"]
+material_override = SubResource("StandardMaterial3D_4wjfs")
+
+[node name="WiggleBone" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="10"]
+transform = Transform3D(-0.720229, 0.147113, 0.677958, 0.444847, -0.651957, 0.614055, 0.532335, 0.743848, 0.404116, 4.66157, 49.0048, 2.96137)
+bone_name = "LeftBreast"
+bone_idx = 31
+script = ExtResource("3_2ql6l")
+properties = SubResource("Resource_bjwln")
+
+[node name="WiggleBone2" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="11"]
+transform = Transform3D(-0.72023, -0.147113, -0.677958, -0.444847, -0.651957, 0.614055, -0.532335, 0.743848, 0.404116, -4.66157, 49.0048, 2.96137)
+bone_name = "RightBreast"
+bone_idx = 32
+script = ExtResource("3_2ql6l")
+properties = SubResource("Resource_bjwln")
+
+[node name="animacionesJenny" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_vru81")
+}
